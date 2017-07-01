@@ -44,34 +44,10 @@ int main(){
 
       if(sslc == ss_size){
         matches++;
+    }
 
-        islc = branch_point;
-
-        while(islc >= 0){
-          if(input_string[islc] == ' '){
-            word_index = islc;
-            break;
-          }
-          word_index = islc;
-          islc--;
-        }
-      }
-
-      islc = word_index;
-
-      while(islc < is_size){
-        printf("%c", input_string[islc]);
-        if(input_string[islc] == ' '){
-          break;
-        }
-        islc++;
-      }
-
-      sslc = 0;
-      islc = branch_point;
     }
     islc++;
   }
-
-  printf("\n matches = %d \n", matches);
+  printf("Matches = %d \n", matches);
 }
