@@ -58,20 +58,23 @@ Press any negative number to stop code \n");
     if(input < 1){
       printf("Thanks for using our code! \n");
     }
-    else if(input == 1){
-      sa_prism();
-    }
-    else if(input == 2){
-      a_circle();
-    }
-    else if(input == 3){
-      ci_circle();
-    }
-    else if(input == 4){
-      a_trapezoid();
-    }
     else{
-      printf("Invalid number! \n");
+      switch(input){
+        case 1:
+          sa_prism();
+          break;
+        case 2:
+          a_circle();
+          break;
+        case 3:
+          ci_circle();
+          break;
+        case 4:
+          a_trapezoid();
+          break;
+        default:
+          printf("Invalid Number! \n");
+      }
     }
   }
 }
