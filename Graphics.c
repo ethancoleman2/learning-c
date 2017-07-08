@@ -179,13 +179,11 @@ int main(){
 
     while(choice > 1){
       printf("Press 1 for a point \n\
-Press 2 for a line \n");
+Press 2 for a line \n\
+Press anything less than 1 to exit \n");
       scanf("%d", &choice);
 
-      if(choice > 2){
-        printf("Please select a number abiding by the guidlines! \n");
-      }
-      else if(choice == 1){
+      if(choice == 1){
         d_point();
         break;
       }
@@ -193,8 +191,12 @@ Press 2 for a line \n");
         d_line();
         break;
       }
+      else if(choice < 1){
+        printf("Thank you for using our code! \n");
+        break;
+      }
       else{
-        printf("Invalid Number! \n");
+        printf("Please select a number abiding by the guidlines! \n");
       }
     }
 
